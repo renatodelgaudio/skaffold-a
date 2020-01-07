@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skaffold-a-deployment
+  labels:
+    app: skaffold-a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skaffold-a
+  template:
+    metadata:
+      labels:
+        app: skaffold-a
+    spec:
+      containers:
+        - name: skaffold-a
+          image: csskaffold.azurecr.io/skaffold-example/skaffold-a
+          ports:
+            - containerPort: 8080
