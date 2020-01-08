@@ -3,6 +3,7 @@ kind: Config
 build:
   artifacts:
   - image: csskaffold.azurecr.io/skaffold-example/skaffold-a
+    jib: {}
 deploy:
   kubectl:
     manifests:
