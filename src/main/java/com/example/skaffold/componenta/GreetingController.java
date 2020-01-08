@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-    private static final String template = "Hello, %s!";
+    private static final String template = "Hello, %s! This is a skaffold PoC where docker container has been built by using DockerFile approach";
     private final AtomicLong counter = new AtomicLong();
   
     @RequestMapping("/greeting")
